@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多时区数字时钟</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 多时区时钟</h1>
+            <p>实时显示全球不同时区的时间</p>
+        </header>
+
+        <div class="controls">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="timezoneInput" 
+                    placeholder="输入时区名称 (例如: Asia/Shanghai)"
+                    list="timezoneList"
+                >
+                <datalist id="timezoneList">
+                    <option value="America/New_York">美国纽约</option>
+                    <option value="America/Chicago">美国芝加哥</option>
+                    <option value="America/Denver">美国丹佛</option>
+                    <option value="America/Los_Angeles">美国洛杉矶</option>
+                    <option value="Europe/London">英国伦敦</option>
+                    <option value="Europe/Paris">法国巴黎</option>
+                    <option value="Europe/Berlin">德国柏林</option>
+                    <option value="Asia/Shanghai">中国上海</option>
+                    <option value="Asia/Hong_Kong">香港</option>
+                    <option value="Asia/Tokyo">日本东京</option>
+                    <option value="Asia/Singapore">新加坡</option>
+                    <option value="Asia/Dubai">阿联酋迪拜</option>
+                    <option value="Asia/Kolkata">印度</option>
+                    <option value="Australia/Sydney">澳大利亚悉尼</option>
+                    <option value="Pacific/Auckland">新西兰奥克兰</option>
+                    <option value="UTC">协调世界时 (UTC)</option>
+                </datalist>
+                <button id="addBtn" onclick="addTimezone()">添加时区</button>
+            </div>
+            <button id="resetBtn" onclick="resetTimezones()" class="reset-btn">🔄 重置</button>
+        </div>
+
+        <div class="clocks-container" id="clocksContainer">
+            <!-- 时钟卡片将动态添加到这里 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
